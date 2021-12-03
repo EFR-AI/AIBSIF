@@ -44,7 +44,7 @@
   <a href="https://github.com/Duramann">Théo Dura</a> ,
   <a href="https://github.com/Matthieu-Ecc">Matthieu Eccher</a> ,
   <a href="tbd">Numan Sahnou</a> ,
-  <a href="tbd">Vitor Serena</a> and
+  <a href="tbd">Vitor Serena</a> and 
   <a href="https://github.com/EFR-AI/AIBSIF/graphs/contributors">
     contributors
   </a>
