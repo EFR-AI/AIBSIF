@@ -19,7 +19,6 @@ Autonomous navigation cours mathlab: https://www.youtube.com/watch?v=Fw8JQ5Q-ZwU
     Loyalty card
     Oceanography
 
-
 # Ce qui permet de réaliser la fusion de données:
 
 https://medium.com/france-school-of-ai/la-fusion-de-capteurs-587f91a1423a
