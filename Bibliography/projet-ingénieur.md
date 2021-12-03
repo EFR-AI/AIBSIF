@@ -1,4 +1,4 @@
-Ce qui existe déja pour la fusion de données:
+# Ce qui existe déja pour la fusion de données:
 
 Comprendre les filtres de kalman: https://www.youtube.com/watch?v=mwn8xhgNpFY
 
@@ -6,7 +6,7 @@ autonomous navigation cours mathlab
 
 https://www.youtube.com/watch?v=Fw8JQ5Q-ZwU&list=PLn8PRpmsu08rLRGrnF-S6TyGrmcA2X7kg&ab_channel=MATLAB
 
-les domaines qui utilise la fusion de donnée
+# Les domaines qui utilise la fusion de donnée
 
 Bioinformatics
 Biometrics
@@ -22,10 +22,10 @@ Loyalty card
 Oceanography
 
 
-Ce qui permet de réaliser la fusion de données:
+# Ce qui permet de réaliser la fusion de données:
 
 https://medium.com/france-school-of-ai/la-fusion-de-capteurs-587f91a1423a
 
 
 
-source de projet/ repository:
+# Source de projet/ repository:
