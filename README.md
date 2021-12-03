@@ -52,9 +52,9 @@
 
 ## Organization:
 <div align="center">
-<a href="https://https://www.perseusproject.com/" target="_blank"><img src="https://perseus.cnes.fr/sites/default/files/styles/medium/public/drupal/201907/image/bpc_perseus_logo_allege.jpg" width="133" height="100" ></a>
-<a href="https://https://cnes.fr/en" target="_blank"><img src="https://cnes.fr/sites/default/files/drupal/201707/image/is_logo_2017_logo_carre_bleu.jpg" width="105" height="100"></a>
-<a href="https://https://www.efrei.fr/" target="_blank"><img src="https://www.efrei.fr/wp-content/uploads/2019/06/Logo-Efrei-2017-Fr-Web.png" width="270" height="100"></a>
+<a href="https:/www.perseusproject.com/" target="_blank"><img src="https://perseus.cnes.fr/sites/default/files/styles/medium/public/drupal/201907/image/bpc_perseus_logo_allege.jpg" width="133" height="100" ></a>
+<a href="https://www.cnes.fr/en" target="_blank"><img src="https://cnes.fr/sites/default/files/drupal/201707/image/is_logo_2017_logo_carre_bleu.jpg" width="105" height="100"></a>
+<a href="https://www.efrei.fr/" target="_blank"><img src="https://www.efrei.fr/wp-content/uploads/2019/06/Logo-Efrei-2017-Fr-Web.png" width="270" height="100"></a>
 </div>
   
 ## Table of Contents
