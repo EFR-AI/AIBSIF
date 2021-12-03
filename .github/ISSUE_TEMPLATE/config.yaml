@@ -1,0 +1,6 @@
+# Ref: https://help.github.com/en/github/building-a-strong-community/configuring-issue-templates-for-your-repository#configuring-the-template-chooser
+blank_issues_enabled: false  
+contact_links:
+- name: 🤷💻🤦 Discord
+  url: https://discord.gg/UDEb2dtf2E
+  about: Please ask typical Q&A here
