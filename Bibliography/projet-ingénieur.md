@@ -4,6 +4,8 @@ Comprendre les filtres de kalman: https://www.youtube.com/watch?v=mwn8xhgNpFY
 
 Autonomous navigation cours mathlab: https://www.youtube.com/watch?v=Fw8JQ5Q-ZwU&list=PLn8PRpmsu08rLRGrnF-S6TyGrmcA2X7kg&ab_channel=MATLAB
 
+fusion de capteur cours : https://www.youtube.com/playlist?list=PLn8PRpmsu08ryYoBpEKzoMOveSTyS-h4a
+
 # Les domaines qui utilise la fusion de donnée
 
     Bioinformatics
