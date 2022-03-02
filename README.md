@@ -17,7 +17,7 @@
       alt="license" />
   </a>
   <!-- Maintenance -->
-    <img src="https://img.shields.io/maintenance/yes/2021?style=for-the-badge"
+    <img src="https://img.shields.io/maintenance/yes/2022?style=for-the-badge"
       alt="Maintenance" />
   <!-- Size -->
     <img src="https://img.shields.io/github/repo-size/EFR-AI/AIBSIF?style=for-the-badge"
