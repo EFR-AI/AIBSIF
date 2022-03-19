@@ -43,7 +43,7 @@
   <a href="tbd">Louis Dumontet</a> ,
   <a href="https://github.com/Duramann">Théo Dura</a> ,
   <a href="https://github.com/Matthieu-Ecc">Matthieu Eccher</a> ,
-  <a href="tbd">Numan Sahnou</a> ,
+  <a href="https://github.com/numan-sahnou">Numan Sahnou</a> ,
   <a href="tbd">Vitor Serena</a> and 
   <a href="https://github.com/EFR-AI/AIBSIF/graphs/contributors">
     contributors
@@ -66,6 +66,6 @@
 <a href="tbd" target="_blank"><img src="https://cdn.discordapp.com/icons/916284262855106561/b04b5d8a302498a461bc7198664b710a.png?size=100"></a>
 <a href="https://github.com/Duramann" target="_blank"><img src="https://media.discordapp.net/attachments/916311623973609522/916312189428723752/unknown.png"></a>
 <a href="https://github.com/Matthieu-Ecc" target="_blank"><img src="https://cdn.discordapp.com/avatars/366621325143441408/af9e1f5d98b863017a76a042a1fc9258.png?size=100"></a>
-<a href="tbd" target="_blank"><img src="https://cdn.discordapp.com/avatars/152191486820089856/66950e226fb9f169c64b157c49eacb31.png?size=100"></a>
+<a href="https://github.com/numan-sahnou" target="_blank"><img src="https://cdn.discordapp.com/avatars/152191486820089856/66950e226fb9f169c64b157c49eacb31.png?size=100"></a>
 <a href="tbd" target="_blank"><img src="https://cdn.discordapp.com/icons/916284262855106561/b04b5d8a302498a461bc7198664b710a.png?size=100"></a>
 </div>
