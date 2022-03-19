@@ -10,7 +10,7 @@ from equation import Pression, Temperature
 
 
 
-def results_table (t, Y, periode_ech, wind_arg, X_CG, gps, sequence, temps=None, x=None, y=None, z=None, vitesses=None, norme_vitesse=None, accelerations=None, accelerations_mesurées=None, angles_euler=None, angles_cardan=None, quaternions=None, vitesses_angulaires=None, accelerations_angulaires=None, pression=None, temperature=None, magnetique=None, GPS=None):
+def results_table (name,t, Y, periode_ech, wind_arg, X_CG, gps, sequence, temps=None, x=None, y=None, z=None, vitesses=None, norme_vitesse=None, accelerations=None, accelerations_mesurées=None, angles_euler=None, angles_cardan=None, quaternions=None, vitesses_angulaires=None, accelerations_angulaires=None, pression=None, temperature=None, magnetique=None, GPS=None):
     """
     Paramètres : 
     - t : la liste des temps,
@@ -165,7 +165,7 @@ def results_table (t, Y, periode_ech, wind_arg, X_CG, gps, sequence, temps=None,
     separateur = '\t' # separateur utiliser par le tableur
 
     ### Ouverture du fichier
-    f = open('resultats/resultats.csv','w')
+    f = open('resultats/resultats_'+name+'.csv','w')
     
     ### Ecriture des titres
     if not(temps is None) :
@@ -445,7 +445,7 @@ def generate_GPS(list_x, list_y, list_z, gps):
 
 
 
-def result_sensors (my_rocket, t):
+def result_sensors (name,my_rocket, t):
     """
     Paramètres : my_rocket la variable contenant la fusée simulée, t la liste des temps
     Produit un tableau au format .csv avec l'ensemble des données mesurées par les capteurs de la fusée
@@ -456,7 +456,7 @@ def result_sensors (my_rocket, t):
     separateur = '\t' # Définission du séparateur pour le tableur
 
     ### Ouverture du fichier 
-    f = open('resultats/sensors_data.csv','w')
+    f = open('resultats/sensors_data_'+name+'.csv','w')
     
     ### Rédaction des titres
     f.write('Temps'+separateur)

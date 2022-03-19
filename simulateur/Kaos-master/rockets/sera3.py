@@ -1,4 +1,5 @@
 import os,sys,inspect
+from random import random
 import matplotlib.pyplot as plt
 from typing import Iterable, Optional
 current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
@@ -13,7 +14,9 @@ from rockets.rocketclass import Rocket
 ########## Rocket definitions ###########
 #########################################
 
-SERA3 = Rocket(
+global sera3
+
+sera3 = Rocket(
         aux_masse = 3.168,
         moteur = Moteur(thrust=engine_reader('rockets/engines/thrust_profile_SERA3.txt'), masse=14.294, h=0.01, R=0.125, X = 4.7),                       
 
@@ -30,11 +33,11 @@ SERA3 = Rocket(
         cn = None,
         cg = None,
         cpa = None,
-        accelerometres_list=[Accelerometre([2.09,0.0,0.0],phi=0.0, theta=0.0, psi=0.0, incertitude_phi=0.0, incertitude_theta=0.0, incertitude_psi=0.0, noise_power=0.0, erreur_de_justesse=0.0)],
-        gyroscopes_list = [Gyroscope('zyx')],
-        gyrometres_list = [Gyrometre()],
+        accelerometres_list=[Accelerometre([2.09,0.0,0.0],phi=0.0, theta=0.0, psi=0.0, incertitude_phi=0.0, incertitude_theta=0.0, incertitude_psi=0.0, noise_power=random.randint(0,7)/10, erreur_de_justesse=random.randint(0,7)/10)],
+        gyroscopes_list = [Gyroscope('zyx', noise_power=random.randint(0,7)/10, erreur_de_justesse=random.randint(0,7)/10)],
+        gyrometres_list = [Gyrometre(noise_power=random.randint(0,7)/10, erreur_de_justesse=random.randint(0,7)/10)],
         barometres_list = None,
-        magnetometres_list = [Magnetometre()],
+        magnetometres_list = [Magnetometre(noise_power=random.randint(0,7)/10, erreur_de_justesse=random.randint(0,7)/10)],
         thermometres_list = None,
         GPS_list = [GPS()],
         list_Cx = np.array(
