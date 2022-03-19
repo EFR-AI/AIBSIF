@@ -57,6 +57,9 @@ sera3 = Rocket(
         ),
 )
 
+print(sera3)
+print(sera3.gyrometres_list[-1])
+
 
 def affichage_fusée(rocket):
     plt.figure()
