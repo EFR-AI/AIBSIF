@@ -17,7 +17,7 @@ from engine_parser import *
 from rockets.rocketclass import Rocket
 
 
-for name in tqdm(range(10)):
+for name in tqdm(range(100)):
 
     ###### Paramètres du vol qui peuvent être modifiés ###################
 
@@ -90,7 +90,7 @@ for name in tqdm(range(10)):
     h = 0.02           
 
     # initialise le nombre d'iteration max
-    nb_iter_max = 200
+    nb_iter_max = 3500
 
     # Choisir si on veut faire du controle avec un ordinateur de bord ou non
     control = False #True si oui et False si non
