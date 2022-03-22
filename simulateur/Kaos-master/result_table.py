@@ -165,7 +165,7 @@ def results_table (name,t, Y, periode_ech, wind_arg, X_CG, gps, sequence, temps=
     separateur = ',' # separateur utiliser par le tableur
 
     ### Ouverture du fichier
-    f = open('resultats/resultats_'+name+'.csv','w')
+    f = open('../../data/resultats/resultats_'+name+'.csv','w')
     
     ### Ecriture des titres
     if not(temps is None) :
@@ -461,13 +461,13 @@ def result_sensors (name,my_rocket, t, periode_ech):
     separateur = ',' # Définission du séparateur pour le tableur
 
     ### Ouverture du fichier 
-    f = open('resultats/sensors_data_'+name+'.csv','w')
+    f = open('../../data/sensors_data/sensors_data_'+name+'.csv','w')
     
     ### Rédaction des titres
     f.write('Temps'+separateur)
     i = 1
     for capteur in my_rocket.fusee.accelerometres_list:
-        for axe in ['x (en m/s²)', 'y (en m/s²)', 'z (en m/s²)']:
+        for axe in ['x (en m/s2)', 'y (en m/s2)', 'z (en m/s2)']:
             f.write('Accelerometre '+str(i)+' '+axe+separateur)
         i+=1
     i = 1
