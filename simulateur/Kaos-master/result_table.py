@@ -162,7 +162,7 @@ def results_table (name,t, Y, periode_ech, wind_arg, X_CG, gps, sequence, temps=
     list_GPS = generate_GPS(list_x, list_y, list_z, gps)
     
     ##### Redaction du fichier de résultat
-    separateur = '\t' # separateur utiliser par le tableur
+    separateur = ',' # separateur utiliser par le tableur
 
     ### Ouverture du fichier
     f = open('resultats/resultats_'+name+'.csv','w')
@@ -183,13 +183,13 @@ def results_table (name,t, Y, periode_ech, wind_arg, X_CG, gps, sequence, temps=
     if not(norme_vitesse is None) :
         f.write('Vitesse globale'+separateur)
     if not(accelerations is None) :
-        f.write('Accélération en x'+separateur)
-        f.write('Accélération en y'+separateur)
-        f.write('Accélération en z'+separateur)
+        f.write('Acceleration en x'+separateur)
+        f.write('Acceleration en y'+separateur)
+        f.write('Acceleration en z'+separateur)
     if not(accelerations_mesurées is None) :    
-        f.write('Accélération en x avec g'+separateur)
-        f.write('Accélération en y avec g'+separateur)
-        f.write('Accélération en z avec g'+separateur)
+        f.write('Acceleration en x avec g'+separateur)
+        f.write('Acceleration en y avec g'+separateur)
+        f.write('Acceleration en z avec g'+separateur)
     if not(angles_euler is None) :
         f.write('Angle phi'+separateur)
         f.write('Angle theta'+separateur)
@@ -201,9 +201,9 @@ def results_table (name,t, Y, periode_ech, wind_arg, X_CG, gps, sequence, temps=
         f.write('Vitesse angulaire dx'+separateur)
         f.write('Vitesse angulaire dy'+separateur)
         f.write('Vitesse angulaire dz'+separateur)
-        f.write('Accélération angulaire d2x'+separateur)
-        f.write('Accélération angulaire d2y'+separateur)
-        f.write('Accélération angulaire d2z'+separateur)
+        f.write('Acceleration angulaire d2x'+separateur)
+        f.write('Acceleration angulaire d2y'+separateur)
+        f.write('Acceleration angulaire d2z'+separateur)
     if not(quaternions is None) :
         f.write('Quaternion q0'+separateur)
         f.write('Quaternion q1'+separateur)
@@ -214,9 +214,9 @@ def results_table (name,t, Y, periode_ech, wind_arg, X_CG, gps, sequence, temps=
         f.write('Vitesse angulaire dptheta'+separateur)
         f.write('Vitesse angulaire dpsi'+separateur)
     if not(accelerations_angulaires is None) :
-        f.write('Accélération angulaire d2phi'+separateur)
-        f.write('Accélération angulaire d2ptheta'+separateur)
-        f.write('Accélération angulaire d2psi'+separateur)
+        f.write('Acceleration angulaire d2phi'+separateur)
+        f.write('Acceleration angulaire d2ptheta'+separateur)
+        f.write('Acceleration angulaire d2psi'+separateur)
     if not(magnetique is None) :
         f.write('F champ magnétique (en nT)'+separateur)
         f.write('H champ magnétique (en nT)'+separateur)
@@ -238,64 +238,64 @@ def results_table (name,t, Y, periode_ech, wind_arg, X_CG, gps, sequence, temps=
     ### Ecriture des données
     for i in range(len(list_t)):
         if not(temps is None):
-            f.write(str(list_t[i]).replace('.',',')+separateur)
+            f.write(str(list_t[i].round(2))+separateur)
         if not(x is None):
-            f.write(str(list_x[i]).replace('.',',')+separateur)
+            f.write(str(list_x[i])+separateur)
         if not(y is None):
-            f.write(str(list_y[i]).replace('.',',')+separateur)
+            f.write(str(list_y[i])+separateur)
         if not(z is None):
-            f.write(str(list_z[i]).replace('.',',')+separateur)
+            f.write(str(list_z[i])+separateur)
         if not(vitesses is None):
-            f.write(str(list_vy[i]).replace('.',',')+separateur)
-            f.write(str(list_vz[i]).replace('.',',')+separateur)
-            f.write(str(list_vx[i]).replace('.',',')+separateur)
+            f.write(str(list_vy[i])+separateur)
+            f.write(str(list_vz[i])+separateur)
+            f.write(str(list_vx[i])+separateur)
         if not(norme_vitesse is None):
-            f.write(str(list_v[i]).replace('.',',')+separateur)
+            f.write(str(list_v[i])+separateur)
         if not(accelerations is None):
-            f.write(str(-list_ay[i]).replace('.',',')+separateur)
-            f.write(str(list_az[i]).replace('.',',')+separateur)
-            f.write(str(list_ax[i]).replace('.',',')+separateur)
+            f.write(str(-list_ay[i])+separateur)
+            f.write(str(list_az[i])+separateur)
+            f.write(str(list_ax[i])+separateur)
         if not(accelerations_mesurées is None) :   
-            f.write(str(-list_agy[i]).replace('.',',')+separateur)
-            f.write(str(list_agz[i]).replace('.',',')+separateur)
-            f.write(str(list_agx[i]).replace('.',',')+separateur)
+            f.write(str(-list_agy[i])+separateur)
+            f.write(str(list_agz[i])+separateur)
+            f.write(str(list_agx[i])+separateur)
         if not(angles_euler is None):
-            f.write(str(list_phi[i]).replace('.',',')+separateur)
-            f.write(str(list_theta[i]).replace('.',',')+separateur)
-            f.write(str(list_psi[i]).replace('.',',')+separateur)
+            f.write(str(list_phi[i])+separateur)
+            f.write(str(list_theta[i])+separateur)
+            f.write(str(list_psi[i])+separateur)
         if not(angles_cardan is None):
-            f.write(str(list_x_cardan[i]).replace('.',',')+separateur)
-            f.write(str(list_y_cardan[i]).replace('.',',')+separateur)
-            f.write(str(list_z_cardan[i]).replace('.',',')+separateur)
-            f.write(str(list_dx_cardan[i]).replace('.',',')+separateur)
-            f.write(str(list_dy_cardan[i]).replace('.',',')+separateur)
-            f.write(str(list_dz_cardan[i]).replace('.',',')+separateur)
-            f.write(str(list_d2x_cardan[i]).replace('.',',')+separateur)
-            f.write(str(list_d2y_cardan[i]).replace('.',',')+separateur)
-            f.write(str(list_d2z_cardan[i]).replace('.',',')+separateur)
+            f.write(str(list_x_cardan[i])+separateur)
+            f.write(str(list_y_cardan[i])+separateur)
+            f.write(str(list_z_cardan[i])+separateur)
+            f.write(str(list_dx_cardan[i])+separateur)
+            f.write(str(list_dy_cardan[i])+separateur)
+            f.write(str(list_dz_cardan[i])+separateur)
+            f.write(str(list_d2x_cardan[i])+separateur)
+            f.write(str(list_d2y_cardan[i])+separateur)
+            f.write(str(list_d2z_cardan[i])+separateur)
         if not(quaternions is None):
-            f.write(str(list_q0[i]).replace('.',',')+separateur)
-            f.write(str(list_q1[i]).replace('.',',')+separateur)
-            f.write(str(list_q2[i]).replace('.',',')+separateur)
-            f.write(str(list_q3[i]).replace('.',',')+separateur)
+            f.write(str(list_q0[i])+separateur)
+            f.write(str(list_q1[i])+separateur)
+            f.write(str(list_q2[i])+separateur)
+            f.write(str(list_q3[i])+separateur)
         if not(vitesses_angulaires is None):
-            f.write(str(list_dphi[i]).replace('.',',')+separateur)
-            f.write(str(list_dtheta[i]).replace('.',',')+separateur)
-            f.write(str(list_dpsi[i]).replace('.',',')+separateur)
+            f.write(str(list_dphi[i])+separateur)
+            f.write(str(list_dtheta[i])+separateur)
+            f.write(str(list_dpsi[i])+separateur)
         if not(accelerations_angulaires is None):
-            f.write(str(list_d2phi[i]).replace('.',',')+separateur)
-            f.write(str(list_d2theta[i]).replace('.',',')+separateur)
-            f.write(str(list_d2psi[i]).replace('.',',')+separateur)
+            f.write(str(list_d2phi[i])+separateur)
+            f.write(str(list_d2theta[i])+separateur)
+            f.write(str(list_d2psi[i])+separateur)
         if not(magnetique is None):
             for j in range(len(list_B[i])):
-                f.write(str(list_B[i][j]).replace('.',',')+separateur)
+                f.write(str(list_B[i][j])+separateur)
         if not(temperature is None):
-            f.write(str(list_T[i]).replace('.',',')+separateur)
+            f.write(str(list_T[i])+separateur)
         if not(pression is None):
-            f.write(str(list_P[i]).replace('.',',')+separateur)
+            f.write(str(list_P[i])+separateur)
         if not(GPS is None):
             for j in range(len(list_GPS[i])):
-                f.write(str(list_GPS[i][j]).replace('.',',')+separateur)
+                f.write(str(list_GPS[i][j])+separateur)
         f.write('\n')
 
     ### Fermeture du fichier
@@ -445,15 +445,20 @@ def generate_GPS(list_x, list_y, list_z, gps):
 
 
 
-def result_sensors (name,my_rocket, t):
+def result_sensors (name,my_rocket, t, periode_ech):
     """
     Paramètres : my_rocket la variable contenant la fusée simulée, t la liste des temps
     Produit un tableau au format .csv avec l'ensemble des données mesurées par les capteurs de la fusée
     Ce fichier est nommé "sensors_data.csv" et se trouve dans le dossier "resultats" 
     /!\ n'oubliez pas de fermer le fichier avant de relancer la simulation, sinon il ne sera pas mis à jour /!\
     """
+
+    list_t = np.array([t])
+    list_t = np.arange(list_t[0,0], list_t[0,-1], periode_ech)
+
+
     
-    separateur = '\t' # Définission du séparateur pour le tableur
+    separateur = ',' # Définission du séparateur pour le tableur
 
     ### Ouverture du fichier 
     f = open('resultats/sensors_data_'+name+'.csv','w')
@@ -503,26 +508,26 @@ def result_sensors (name,my_rocket, t):
     ### Rédactions des données
 
     for i in range(len(t)):
-        f.write(str(t[i]).replace('.',',')+separateur)
+        f.write(str(list_t[i].round(2))+separateur)
         for capteur in my_rocket.fusee.accelerometres_list:
             for axe in range(len(capteur.liste_mesures[i])):
-                f.write(str(capteur.liste_mesures[i][axe]).replace('.',',')+separateur)
+                f.write(str(capteur.liste_mesures[i][axe])+separateur)
         for capteur in my_rocket.fusee.gyroscopes_list:
             for angle in range(len(capteur.liste_mesures[i])):
-                f.write(str(capteur.liste_mesures[i][angle]).replace('.',',')+separateur)
+                f.write(str(capteur.liste_mesures[i][angle])+separateur)
         for capteur in my_rocket.fusee.gyrometres_list:
             for angle in range(len(capteur.liste_mesures[i])):
-                f.write(str(capteur.liste_mesures[i][angle]).replace('.',',')+separateur)
+                f.write(str(capteur.liste_mesures[i][angle])+separateur)
         for capteur in my_rocket.fusee.barometres_list:
-            f.write(str(capteur.liste_mesures[i]).replace('.',',')+separateur)
+            f.write(str(capteur.liste_mesures[i])+separateur)
         for capteur in my_rocket.fusee.thermometres_list:
-            f.write(str(capteur.liste_mesures[i]).replace('.',',')+separateur)
+            f.write(str(capteur.liste_mesures[i])+separateur)
         for capteur in my_rocket.fusee.magnetometres_list:
             for valeur in range(len(capteur.liste_mesures[i])):
-                f.write(str(capteur.liste_mesures[i][valeur]).replace('.',',')+separateur)
+                f.write(str(capteur.liste_mesures[i][valeur])+separateur)
         for capteur in my_rocket.fusee.GPS_list:
             for valeur in range(len(capteur.liste_mesures[i])):
-                f.write(str(capteur.liste_mesures[i][valeur]).replace('.',',')+separateur)
+                f.write(str(capteur.liste_mesures[i][valeur])+separateur)
         f.write('\n')
     
     ### Fermeture du fichier

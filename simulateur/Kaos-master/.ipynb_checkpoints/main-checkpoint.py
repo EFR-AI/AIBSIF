@@ -195,6 +195,6 @@ for name in tqdm(range(100)):
     periode_ech = 0.02
     gps = Coordonne_gps([latitude,longitude])
     results_table(str(name),t, Y, periode_ech, wind_arg, my_rocket.fusee.X_CG,gps, sequence, temps=1, z=1, accelerations_mesurées=1, angles_euler=1)
-    result_sensors(str(name),my_rocket, t, periode_ech)
+    result_sensors(str(name),my_rocket, t)
     del my_rocket
     
