@@ -39,13 +39,13 @@ for name in tqdm(range(100)):
         cn = None,
         cg = None,
         cpa = None,
-        accelerometres_list=[Accelerometre([2.09,0.0,0.0],phi=0.0, theta=0.0, psi=0.0, incertitude_phi=0.0, incertitude_theta=0.0, incertitude_psi=0.0, noise_power=random.random()/100, erreur_de_justesse=random.randint(0,10)/100)],
-        gyroscopes_list = [Gyroscope('zyx', noise_power=random.random()/10, erreur_de_justesse=random.randint(0,10)/100)],
-        gyrometres_list = [Gyrometre(noise_power=random.random()/10, erreur_de_justesse=random.randint(0,10)/100)],
+        accelerometres_list=[Accelerometre([2.09,0.0,0.0],phi=0.0, theta=0.0, psi=0.0, incertitude_phi=0.0, incertitude_theta=0.0, incertitude_psi=0.0, noise_power=random.random()/100, erreur_de_justesse=random.randint(0,10)/100),Accelerometre([2.09,0.0,0.0],phi=0.0, theta=0.0, psi=0.0, incertitude_phi=0.0, incertitude_theta=0.0, incertitude_psi=0.0, noise_power=random.random()/100, erreur_de_justesse=random.randint(0,10)/100),Accelerometre([2.09,0.0,0.0],phi=0.0, theta=0.0, psi=0.0, incertitude_phi=0.0, incertitude_theta=0.0, incertitude_psi=0.0, noise_power=random.random()/100, erreur_de_justesse=random.randint(0,10)/100)],
+        gyroscopes_list = [Gyroscope('zyx', noise_power=random.random()/10, erreur_de_justesse=random.randint(0,10)/100),Gyroscope('zyx', noise_power=random.random()/10, erreur_de_justesse=random.randint(0,10)/100),Gyroscope('zyx', noise_power=random.random()/10, erreur_de_justesse=random.randint(0,10)/100)],
+        gyrometres_list = None,
         barometres_list = None,
-        magnetometres_list = [Magnetometre(noise_power=random.random()/10, erreur_de_justesse=random.randint(0,10)/100)],
+        magnetometres_list = None,
         thermometres_list = None,
-        GPS_list = [GPS(noise_power=random.random()/10, erreur_de_justesse=random.randint(0,10)/10)],
+        GPS_list = None,
         list_Cx = np.array(
         [
         [0.1, 0.49458948],
@@ -90,7 +90,7 @@ for name in tqdm(range(100)):
     h = 0.02           
 
     # initialise le nombre d'iteration max
-    nb_iter_max = 3000
+    nb_iter_max = 5000
 
     # Choisir si on veut faire du controle avec un ordinateur de bord ou non
     control = False #True si oui et False si non

@@ -165,7 +165,7 @@ def results_table (name,t, Y, periode_ech, wind_arg, X_CG, gps, sequence, temps=
     separateur = ',' # separateur utiliser par le tableur
 
     ### Ouverture du fichier
-    f = open('../../data/resultats/resultats_'+name+'.csv','w')
+    f = open('../../data/resultats_3IMU/resultats_'+name+'.csv','w')
     
     ### Ecriture des titres
     if not(temps is None) :
@@ -461,7 +461,7 @@ def result_sensors (name,my_rocket, t, periode_ech):
     separateur = ',' # Définission du séparateur pour le tableur
 
     ### Ouverture du fichier 
-    f = open('../../data/sensors_data/sensors_data_'+name+'.csv','w')
+    f = open('../../data/sensors_data_3IMU/sensors_data_'+name+'.csv','w')
     
     ### Rédaction des titres
     f.write('Temps'+separateur)

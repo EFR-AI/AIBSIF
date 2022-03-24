@@ -1,0 +1,26 @@
+{
+    "os": "Windows-10-10.0.19041-SP0",
+    "python": "3.9.0",
+    "heartbeatAt": "2022-03-23T16:36:35.619945",
+    "startedAt": "2022-03-23T16:36:31.600343",
+    "docker": null,
+    "gpu": "NVIDIA GeForce GTX 1060 with Max-Q Design",
+    "gpu_count": 1,
+    "cpu_count": 12,
+    "cuda": null,
+    "args": [
+        "-f",
+        "C:\\Users\\theo-\\AppData\\Roaming\\jupyter\\runtime\\kernel-d494e9b9-85f8-46e4-a9d5-418fa695cdb3.json"
+    ],
+    "state": "running",
+    "program": "src/model/model.ipynb",
+    "root": "D:/Logiciel_\u00e9cole/GitHub/AIBSIF",
+    "git": {
+        "remote": "https://github.com/EFR-AI/AIBSIF.git",
+        "commit": "cda2dc6a07fc8a4c51d50f9f5dc8eb873ad958b0"
+    },
+    "email": "theo.dura@efrei.net",
+    "host": "Pc-de-Thoe",
+    "username": "theo-",
+    "executable": "d:\\python\\python.exe"
+}
