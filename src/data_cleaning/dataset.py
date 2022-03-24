@@ -1,6 +1,8 @@
 import pandas as pd
 import numpy as np
 from sklearn.utils import shuffle
+import random
+import os
 
 def define_dataset(final_csv, number_imu):
     """
@@ -70,4 +72,30 @@ def build_dataset(start_seq, end_seq, window_size,stride, number_imu):
     final_x, final_y = shuffle(final_x, final_y)
     
     return final_x, final_y
+        
+def test_data(window_size,stride):
+    """
+    Même programme mais pour tester le modèle.
+    """
+    
+    final_x = []
+    final_y = []
+    
+    list = os.listdir('../../data/final_test/') 
+    number_files = len(list)
+    
+    for i in range(number_files):
+        x,y = define_dataset('../../data/final_test/final_{}.csv'.format(i),3)
+        cur_x, cur_y = sequence(x,y, window_size,stride)
+        
+        final_x.append(cur_x)
+        final_y.append(cur_y)
+    
+    final_x = np.vstack(final_x)
+    final_y = np.vstack(final_y)
+    
+    final_x, final_y = shuffle(final_x, final_y)
+    
+    return final_x, final_y
+
         

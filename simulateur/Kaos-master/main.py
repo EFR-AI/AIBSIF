@@ -17,7 +17,7 @@ from engine_parser import *
 from rockets.rocketclass import Rocket
 
 
-for name in tqdm(range(100)):
+for name in tqdm(range(20)):
 
     ###### Paramètres du vol qui peuvent être modifiés ###################
 
@@ -78,8 +78,8 @@ for name in tqdm(range(100)):
     angle_rampe = 82 / 90 * np.pi / 2   # angle de la rampe avec le sol en radian 
 
     #Site de lancement actuellemnt Kiruna
-    latitude  =  67.8557200
-    longitude =  20.2251300
+    latitude  =  random.randint(50,70)
+    longitude =  random.randint(10,30)
     altitude  = 0
 
     # départ face au vent ou autre angle en radian 
