@@ -59,7 +59,8 @@
   
 ## Table of Contents
 - [Team](#team)
-- [Data génération](#team)
+- [Data generation](#team)
+- [Working with our model](#team)
   
 ## Team
 <div align="center">
@@ -70,3 +71,6 @@
 <a href="tbd" target="_blank"><img src="https://cdn.discordapp.com/avatars/152191486820089856/66950e226fb9f169c64b157c49eacb31.png?size=100"></a>
 <a href="https://github.com/numan-sahnou" target="_blank"><img src="https://cdn.discordapp.com/icons/916284262855106561/b04b5d8a302498a461bc7198664b710a.png?size=100"></a>
 </div>
+  
+## Data generation
+  
