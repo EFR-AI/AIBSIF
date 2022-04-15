@@ -74,3 +74,26 @@
   
 ## Data generation
   
+In order to produce some data we used the flight rocket simulator developed by a PERSEUS team of Central Lille. You can find the code in AIBSIF/simulateur/Kaos-master/
+
+We focus on the main.py file. In main the my_rocket objet was called from the sera3.py file that you can find in AIBSIF/simulateur/Kaos-master/rockets . The sera3.py containt an accurate object representing the SERA3 rocket with exacte physical parameters, but also inertial measurement unit which are configurable with "noise_power" and "erreur_de_justesse".
+Previously in the first version of the code the obejct sera3 was called only once leading to variation null in our data generation. This is why we took the entire code of sera3 and put in directly in the main.py file. This way we generate slightly different data from each other.
+we randomized this parameter:
+
+    accelerometres_list=[Accelerometre([2.09,0.0,0.0],phi=0.0, theta=0.0, psi=0.0, incertitude_phi=0.0, incertitude_theta=0.0, incertitude_psi=0.0, noise_power=random.random()/100,erreur_de_justesse=random.randint(0,10)/100),Accelerometre([2.09,0.0,0.0],phi=0.0, theta=0.0, psi=0.0, incertitude_phi=0.0, incertitude_theta=0.0, incertitude_psi=0.0, noise_power=random.random()/100, erreur_de_justesse=random.randint(0,10)/100),Accelerometre([2.09,0.0,0.0],phi=0.0, theta=0.0, psi=0.0, incertitude_phi=0.0, incertitude_theta=0.0, incertitude_psi=0.0, noise_power=random.random()/100, erreur_de_justesse=random.randint(0,10)/100)],
+
+    gyroscopes_list = [Gyroscope('zyx', noise_power=random.random()/10, erreur_de_justesse=random.randint(0,10)/100),Gyroscope('zyx', noise_power=random.random()/10, erreur_de_justesse=random.randint(0,10)/100),Gyroscope('zyx', noise_power=random.random()/10, erreur_de_justesse=random.randint(0,10)/100)],
+        
+    puissance_vent = random.choice([0,1,2])
+    longeur_rampe = random.choice([7,8,9,10,11,12,13,14,15])
+    latitude  =  random.randint(50,70)
+    longitude =  random.randint(10,30)
+
+
+If you want to generate new data you can keep this code or modifie parameter, you can also change rocket model but keep in mind that our machine leanrning model needs 3 IMU of each type. then execute main.py file. the code will produce a N number of data set according to the value of the loop:
+
+    for name in tqdm(range(20)): #here the value is 20
+
+Data produced with no error will be register in folder resultats_3IMU and data produced with randomized error will be register in folder sensors_data_3IMU
+
+## Working with our model
